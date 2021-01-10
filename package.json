@@ -8,8 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
+    "localbase": "^0.7.4",
+    "uuidv4": "^6.2.6",
+    "vue": "^2.6.12",
+    "vuelidate": "^0.7.6",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

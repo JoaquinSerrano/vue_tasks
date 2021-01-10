@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Header />
+    <Filtro />
+    <Main />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import { mapActions } from "vuex";
+import Header from "@/layouts/Header";
+import Filtro from "@/layouts/Filter";
+import Main from "@/layouts/Main";
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    Header,
+    Filtro,
+    Main,
+  },
+  created() {
+    this.getTasks();
+  },
+  methods: {
+    ...mapActions(["getTasks"]),
+  },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.modal-header {
+  background-color: white;
 }
 </style>
