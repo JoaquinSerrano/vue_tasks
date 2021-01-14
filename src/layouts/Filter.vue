@@ -14,7 +14,7 @@
             <b-icon icon="clipboard-plus"></b-icon>
             Nueva Tarea
           </b-button>
-          <b-button variant="danger" @click="removeAllTasks">
+          <b-button variant="danger" @click="handleRemoveTask">
             <b-icon icon="x-circle"></b-icon>
             Eliminar todas las tareas
           </b-button>
@@ -22,6 +22,9 @@
       </b-col>
     </b-row>
     <modal-form></modal-form>
+    <b-modal ref="mi-modal" @ok="handleOk"
+      >¿Seguro que quieres eliminar todas las tareas?</b-modal
+    >
   </b-container>
 </template>
 
@@ -35,6 +38,12 @@ export default {
   methods: {
     ...mapMutations(["SEARCH_TASK"]),
     ...mapActions(["removeAllTasks"]),
+    handleRemoveTask() {
+      this.$refs["mi-modal"].show();
+    },
+    handleOk() {
+      this.removeAllTasks();
+    },
   },
 };
 </script>

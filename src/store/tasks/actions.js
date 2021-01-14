@@ -16,7 +16,6 @@ export async function addTask({ commit }, newTask) {
 }
 
 export async function changeState({ state, dispatch }, idTask) {
-  console.log(idTask);
   let task = state.tasks.filter((task) => task.id === idTask);
   console.log(task[0].completed);
   await TasksDB.collection("tasks")
