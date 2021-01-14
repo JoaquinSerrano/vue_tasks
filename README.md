@@ -1,24 +1,15 @@
-# vue_tasks
+# Vue Tasks
 
-## Project setup
-```
-npm install
-```
+Proyecto de un listado de tareas:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Componentes independientes usando bootstrap-vue.
+- El almacenamiento de las tareas se realiza mediante IndexedDB
+- Gestor de estado con Vuex.
+- Busqueda de tarea por su nombre.
+- Formulario para creación de la tarea con validación.
+- Eliminación de una o todas las tareas.
+- Las tareas pasan a la columna correspondiente según su estado.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Este proyecto está enfocado a su funcionamiento, quedando la parte estática (diseño y css) fuera de los objetivos del mismo
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Para ver el proyecto funcionando: [https://joaquinserrano.github.io/vue_tasks/](https://joaquinserrano.github.io/vue_tasks)
